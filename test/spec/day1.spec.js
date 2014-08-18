@@ -89,16 +89,16 @@ describe('day1', function () {
     });
 
     describe('trapezeSquare', function () {
-        iit('should return calculate area of trapeze', function () {
+        it('should return calculate area of trapeze', function () {
             expect(answer.trapezeSquare(2,2,2)).toEqual(4);
         });
-        iit('should return calculate area of trapeze', function () {
+        it('should return calculate area of trapeze', function () {
             expect(answer.trapezeSquare(1,3,6)).toEqual(12);
         });
-        iit('negative numbers should return false', function () {
+        it('negative numbers should return false', function () {
             expect(answer.trapezeSquare(-1,3,6)).toBeFalsy();
         });
-        iit('string should return false', function () {
+        it('string should return false', function () {
             expect(answer.trapezeSquare(-1,"cos",6)).toBeFalsy();
         });
     });
