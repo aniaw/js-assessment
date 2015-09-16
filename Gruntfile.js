@@ -1,16 +1,14 @@
-/*global module*/
 module.exports = function (grunt)
 {
     'use strict';
-
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-karma');
     grunt.initConfig({
         jshint: {
             options: {
                 jshintrc: true
             },
-            all: ['impl/**/*.js', 'test/**/*.js']
+            all: ['app/*.js']
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-jshint');
 };

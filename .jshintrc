@@ -6,13 +6,13 @@
     "eqeqeq": true,
     "eqnull": true,
     "forin": true,
-    "freeze": true,
+    "freeze": false,
     "immed": true,
     "indent": 4,
     "jquery": true,
     "latedef": true,
     "maxcomplexity": 10,
-    "maxdepth": 2,
+    "maxdepth": 3,
     "maxlen": 160,
     "maxparams": 20,
     "maxstatements": 0,
@@ -26,11 +26,8 @@
     "strict": true,
     "trailing": true,
     "undef": true,
-    "unused": true,
+    "unused": false,
     "globals": {
-        "beforeEach": true,
-        "describe": true,
-        "expect": true,
-        "it": true
+        "console": true
     }
 }

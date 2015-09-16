@@ -3,26 +3,22 @@
 ### JS Assessments test basic JavaScript knowledge. Please read instructions carefully to ensure that you understand each task.
 
 Each exercise consist of few simple tasks. You are supposed to implement functions, having provided only the function name and purpose.
-Your solutions should be placed inside **impl/day3.js** file, (most of them as a properties of **window.day3** object).
+Your solutions should be placed inside **app/exercise3.js** file, (most of them as a properties of **window.day3** object).
 
 #### Before you start...
 
 Resolve provided dependencies by typing in console:
 
     npm install
-    bower install
 
 To test your solution locally, type:
-
-    npm start
-    
-or
 
     npm test
 
 JavaScript basic functions:
 
     http://www.w3schools.com/jsref/
+
 Javascript EcmaScript5 tutorials and more:
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript
@@ -46,11 +42,11 @@ by extending the Number prototype of **addNumber** function that will consume a 
     
 ## Part IV
 
-Add **maxValueFromTwoArguments** function to the Number prototype that will accept two arguments:
+Add **isInTheRange** function to the Number prototype that will accept two arguments:
 
-    maxValueFromTwoArguments(arg0, arg1)
+    isInTheRange(start, stop)
     
-This function is supposed to return maximum value of given arguments or the Number itself(if it is higher than both of the arguments).
+This function is supposed to return a boolean true when the Number is between **start** and **stop**, otherwise should return boolean false. Furthermore when **stop** is a lower number than **start**, the function should return undefined.
 
 
 ## Part V
@@ -85,6 +81,7 @@ The function should return an array of arrays defined as follows:
 **propertyName** should be an actual property of **customObject** and **propertyValue** should be its value.
 You should return all the properties of **customObject**. If there are no properties in the object then the function should just return an empty array.
 
+http://jshint.com/docs/options/#forin
 
 ## Part VII
 
@@ -98,9 +95,9 @@ should be returned if the conditions are met. Otherwise, function should just re
 
 ## Part VIII
 
-Create a function that will count the occurrence of a letter inside every property of an object. This function should have following signature:
+Create a function that will count the occurrence of a letter inside every property value of an object. This function should have following signature:
 
-    countCharInProperties(object, letter)
+    countCharInPropertiesValues(object, letter)
     
 The **object** argument can be any object and letter should be just a letter string literal. Please be aware that function needs to be case independent
 (ex. letter can be either 'A' or 'a'). 
@@ -151,27 +148,6 @@ represent the value of the box capacity (calculated from the box properties sema
 
 ## Part XI
 
-Create a **getVolume** function that accepts an object of Box objects as properties:
-
-    getWidth(boxList)
-
-The sample Box object is defined as follows:
-
-    box: {
-        height: 10,
-        width: 5,
-        length: 5
-    }
-
-**getVolume** function should return an array of Strings containing the following formula:
-
-    <boxPropertyName> volume: <volume>
-
-**boxPropertyName** expression is a name of the property inside of **boxList** that the box is attached to. The expression **volume**
-represent the value of the box capacity (calculated from the box properties semantically meaning the properties of a standard box).
-
-## Part XII
-
 Create a **getMaxVolume** function that accepts an object of Box objects as properties:
 
     getWidth(boxList)
@@ -187,7 +163,7 @@ The sample Box object is defined as follows:
 **getMaxVolume** function should return an max **volume** Number. The **volume** represent the value of the box capacity (calculated from the box properties 
 semantically meaning the properties of a standard box).
 
-## Part XIII
+## Part XII
 
 Write a function that will allow you to change property name in the object:
 
@@ -197,7 +173,7 @@ The signature above accepts **object** as an object in which property should be 
 for the property. The function should return a boolean true value if the property was changed(**propertyToChange** existed and it was changed) and boolean false otherwise.
 
 
-## Part XIV
+## Part XIII
 
 Create a **makeObject** function that will consume an two dimensional array:
 
