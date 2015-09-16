@@ -12,11 +12,14 @@ describe('exercise1', function ()
             {
                 expect(exercise1.getDescendingNumbers(15, 1)).toEqual('15 14 13 12 11 10 9 8 7 6 5 4 3 2 1');
                 expect(exercise1.getDescendingNumbers(100, 95)).toEqual('100 99 98 97 96 95');
+                expect(exercise1.getDescendingNumbers(-1, -15)).toEqual('-1 -2 -3 -4 -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 -15');
+                expect(exercise1.getDescendingNumbers(-95, -100)).toEqual('-95 -96 -97 -98 -99 -100');
             });
 
             it('should return false when "start" is greater than "stop"', function ()
             {
-                expect(exercise1.getDescendingNumbers(1, 15)).toBeFalsy();
+                expect(exercise1.getDescendingNumbers(1, 15)).toEqual(false);
+                expect(exercise1.getDescendingNumbers(-15, -1)).toEqual(false);
             });
         });
 
@@ -52,6 +55,10 @@ describe('exercise1', function ()
         {
             expect(exercise1.deleteString('a', ['a'])).toEqual([]);
         });
+        it('should not delete any string from list when array not containing provided string', function ()
+        {
+            expect(exercise1.deleteString('a', ['ala', 'ma', 'kota'])).toEqual(['ala', 'ma', 'kota']);
+        });
     });
 
     describe('stringCounter', function ()
@@ -79,6 +86,7 @@ describe('exercise1', function ()
             it('should return all odd numbers to the square', function ()
             {
                 expect(exercise1.squareOdd([1, 2, 3, 4])).toEqual([1, 2, 9, 4]);
+                expect(exercise1.squareOdd([-1, -2, -3, -4])).toEqual([1, -2, 9, -4]);
             });
 
             it('should return empty array when customArray is empty', function ()
@@ -96,6 +104,7 @@ describe('exercise1', function ()
             it('should return all odd numbers to the square', function ()
             {
                 expect(exercise1.squareOdd(['test', 2, 3, 9, 'text'])).toEqual(['test', 2, 9, 81, 'text']);
+                expect(exercise1.squareOdd(['test', -2, -3, -9, 'text'])).toEqual(['test', -2, 9, 81, 'text']);
             });
         });
 
