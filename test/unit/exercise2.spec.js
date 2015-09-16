@@ -33,7 +33,7 @@
             });
             it('should return false when "number" is string', function ()
             {
-                expect(exercise2.reverseNumber('abcs')).toEqual(false);
+                expect(exercise2.reverseNumber('abcs')).toBe(false);
             });
             it('should return single number', function ()
             {
@@ -110,12 +110,12 @@
 
             it('should return false when array not contain numbers ', function ()
             {
-                expect(exercise2.maxArray(['a', 'b', 'c'])).toBeFalsy();
+                expect(exercise2.maxArray(['a', 'b', 'c'])).toBe(false);
             });
 
             it('should return false when array contain numbers and other elements', function ()
             {
-                expect(exercise2.maxArray(['a', 7, 'c', 3, 'ala', 11, 10])).toBeFalsy();
+                expect(exercise2.maxArray(['a', 7, 'c', 3, 'ala', 11, 10])).toBe(false);
             });
         });
 
@@ -136,7 +136,7 @@
 
             it('should return false if object not exist', function ()
             {
-                expect(exercise2.getObject(list, 'Martin')).toBeFalsy();
+                expect(exercise2.getObject(list, 'Martin')).toBe(false);
             });
         });
 
@@ -204,15 +204,15 @@
             {
                 it('should return false when "x" is a string)', function ()
                 {
-                    expect(exercise2.findTheBiggerBox('text', 9, 2)).toBeFalsy();
+                    expect(exercise2.findTheBiggerBox('text', 9, 2)).toBe(false);
                 });
                 it('should return false when "y" is a string)', function ()
                 {
-                    expect(exercise2.findTheBiggerBox(9, 'text', 2)).toBeFalsy();
+                    expect(exercise2.findTheBiggerBox(9, 'text', 2)).toBe(false);
                 });
                 it('should return false when "z" is a string)', function ()
                 {
-                    expect(exercise2.findTheBiggerBox(9, 2, 'text')).toBeFalsy();
+                    expect(exercise2.findTheBiggerBox(9, 2, 'text')).toBe(false);
                 });
             });
         });
@@ -235,7 +235,7 @@
             });
             it('should return false when "str" is a number', function ()
             {
-                expect(exercise2.invertString(234)).toBeFalsy();
+                expect(exercise2.invertString(234)).toBe(false);
             });
         });
 
